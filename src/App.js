@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from 'react';
 
-import Navigation from "./components/Navigation/Navigation";
+import Navigation from './components/Navigation/Navigation';
 import Button from './components/Button/Button';
-import Container from './components/Container/Container'
-import Timer from './components/Timer/Timer'
+import Container from './components/Container/Container';
+import formatTime from './utils/formatTime';
 
 const App = () => {
 
@@ -34,7 +34,7 @@ const App = () => {
   
   return (
     <Container>
-      <Timer>{time}</Timer>
+      {formatTime(time)}
       <Navigation>
         <Button action={start}>START</Button>
         <Button action={stop}>STOP</Button>
